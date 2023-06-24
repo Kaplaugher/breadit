@@ -15,6 +15,7 @@ const CreateGamePage = (props: Props) => {
   const {} = useMutation({
     mutationFn: async () => {
       const { data } = await axios.post("/api/game", { name: input });
+      console.log("data", data);
     },
   });
   return (
